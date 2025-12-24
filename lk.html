@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АвтоДоктор - Личный кабинет</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .lk-section {
+            background: var(--secondary-bg);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        .lk-section h3 { margin-bottom: 20px; border-bottom: 1px solid #555; padding-bottom: 10px; }
+        
+        /* Таблица для истории */
+        .history-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .history-table th, .history-table td { padding: 10px; border: 1px solid #444; text-align: left; }
+        .history-table th { background: #333; }
+        
+        /* Адаптив таблицы */
+        @media(max-width: 700px) {
+            .history-table, .history-table tbody, .history-table tr, .history-table td { display: block; }
+            .history-table thead { display: none; }
+            .history-table td { border: none; border-bottom: 1px solid #444; position: relative; padding-left: 50%; }
+            .history-table td:before { position: absolute; left: 10px; font-weight: bold; content: attr(data-label); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo"><a href="index.html">AUTO DOCTOR</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Выход</a></li>
+                    <li><button id="theme-toggle" class="btn">Тема</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Личный кабинет</h1>
+        <p style="background: var(--accent-color); padding: 10px; color: #fff; margin-bottom: 20px;">
+            Для участия в наших акциях и спецпредложениях, пожалуйста, заполните всю информацию.
+        </p>
+
+        <!-- 1. Данные клиента -->
+        <section class="lk-section">
+            <h3>Информация о клиенте</h3>
+            <form action="#" class="form-grid">
+                <div style="grid-column: 1/-1; display:flex; gap:20px; align-items:center; margin-bottom:15px;">
+                    <img src="https://placehold.co/100" style="border-radius:50%" alt="Avatar">
+                    <button type="button" class="btn" style="padding:5px 10px; font-size:12px;">Загрузить фото</button>
+                </div>
+                
+                <input type="text" placeholder="Фамилия" value="Иванов">
+                <input type="text" placeholder="Имя" value="Иван">
+                <input type="text" placeholder="Отчество" value="Иванович">
+                <input type="date" value="1990-01-01">
+                <input type="text" placeholder="Город" value="Ставрополь">
+                <input type="tel" placeholder="Телефон" value="+7 999 000 00 00">
+                <input type="email" placeholder="Email" value="ivan@mail.ru">
+                
+                <input type="password" placeholder="Новый пароль">
+                <input type="password" placeholder="Повторить пароль">
+
+                <div class="full-width" style="display:flex; align-items:center; gap:10px;">
+                    <input type="checkbox" id="pd" checked style="width:auto; margin:0;">
+                    <label for="pd">Согласие на обработку персональных данных</label>
+                </div>
+
+                <button class="btn full-width">Обновить данные</button>
+            </form>
+        </section>
+
+        <!-- 2. Автомобили -->
+        <section class="lk-section">
+            <h3>Мои автомобили</h3>
+            <div class="form-grid">
+                <div class="card" style="grid-column: 1/-1; display:flex; align-items:center; gap:20px; text-align:left;">
+                    <img src="https://placehold.co/150x100" alt="Auto">
+                    <div>
+                        <h4>Toyota Camry</h4>
+                        <p>VIN: X789SD789SDF</p>
+                        <p>Гос. номер: А 001 АА 26</p>
+                        <p>Год: 2020</p>
+                    </div>
+                </div>
+                <button class="btn full-width">Добавить автомобиль</button>
+            </div>
+        </section>
+
+        <!-- 3. История ремонта -->
+        <section class="lk-section">
+            <h3>История ремонта</h3>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Автомобиль</th>
+                        <th>Услуга</th>
+                        <th>Дата</th>
+                        <th>Стоимость</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Авто">Toyota Camry</td>
+                        <td data-label="Услуга">Замена масла</td>
+                        <td data-label="Дата">10.03.2025</td>
+                        <td data-label="Цена">5000 руб.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Авто">Toyota Camry</td>
+                        <td data-label="Услуга">Диагностика</td>
+                        <td data-label="Дата">15.01.2025</td>
+                        <td data-label="Цена">1500 руб.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+<footer>
+    <div class="container footer-inner">
+        <div>
+            <h4>О нас</h4>
+            <p>Надежные услуги с 2002 года.</p>
+        </div>
+        <div>
+            <h4>Навигация</h4>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Контакты</h4>
+            <p>info@doc-auto.ru</p>
+            <p>(415) 347-3160</p>
+        </div>
+        <div>
+            <h4>Рассылка</h4>
+            <input type="email" placeholder="Email">
+            <button class="btn">Подписаться</button>
+        </div>
+    </div>
+    <div class="container" style="text-align: center; border-top: 1px solid #333; padding-top: 10px;">
+        &copy; 2025 АвтоДоктор
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

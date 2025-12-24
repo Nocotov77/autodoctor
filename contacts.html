@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АвтоДоктор - Контакты</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo"><a href="index.html">AUTO DOCTOR</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="contacts.html" style="color:var(--accent-color)">Контакты</a></li>
+                    <li><button id="theme-toggle" class="btn">Тема</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Контакты</h1>
+        
+        <div class="info-section">
+            <!-- Инфо -->
+            <div class="info-block">
+                <h3>Наши координаты</h3>
+                <p><strong>Адрес:</strong> г. Ставрополь, ул. Ленина, 1</p>
+                <p><strong>Телефон:</strong> (415) 347-3160</p>
+                <p><strong>Email:</strong> info@doc-auto.ru</p>
+                <br>
+                <img src="https://placehold.co/400x300/333/fff?text=MAP" alt="Карта">
+            </div>
+
+            <!-- Форма -->
+            <div class="booking-form" style="margin:0; flex:1;">
+                <h2>Связаться с нами</h2>
+                <form action="#" class="form-grid" style="grid-template-columns: 1fr;">
+                    <input type="text" placeholder="Ваше Имя" required>
+                    <input type="email" placeholder="Ваш Email" required>
+                    <input type="tel" placeholder="Ваш Телефон">
+                    <textarea rows="5" placeholder="Ваше сообщение"></textarea>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+<footer>
+    <div class="container footer-inner">
+        <div>
+            <h4>О нас</h4>
+            <p>Надежные услуги с 2002 года.</p>
+        </div>
+        <div>
+            <h4>Навигация</h4>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Контакты</h4>
+            <p>info@doc-auto.ru</p>
+            <p>(415) 347-3160</p>
+        </div>
+        <div>
+            <h4>Рассылка</h4>
+            <input type="email" placeholder="Email">
+            <button class="btn">Подписаться</button>
+        </div>
+    </div>
+    <div class="container" style="text-align: center; border-top: 1px solid #333; padding-top: 10px;">
+        &copy; 2025 АвтоДоктор
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АвтоДоктор - Отзывы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Локальный стиль для сетки отзывов (2 колонки) */
+        .feedback-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        @media (max-width: 960px) {
+            .feedback-grid { grid-template-columns: 1fr; }
+        }
+        .feedback-item {
+            background: var(--secondary-bg);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-left: 4px solid var(--accent-color);
+        }
+        .feedback-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка (копия из index.html) -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo"><a href="index.html">AUTO DOCTOR</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="feedback.html" style="color:var(--accent-color)">Отзывы</a></li>
+                    <li><a href="repair.html">Услуги</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="lk.html">ЛК</a></li>
+                    <li><button id="theme-toggle" class="btn">Тема</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="margin-bottom: 30px;">Отзывы наших клиентов</h1>
+        
+        <div class="feedback-grid">
+            <!-- Отзыв 1 -->
+            <div class="feedback-item">
+                <img src="https://placehold.co/80" alt="Клиент" class="feedback-img">
+                <div>
+                    <h4>Алексей Смирнов</h4>
+                    <small>г. Москва</small>
+                    <p>«Отличный сервис! Быстро починили подвеску. Рекомендую всем.»</p>
+                </div>
+            </div>
+            <!-- Отзыв 2 -->
+            <div class="feedback-item">
+                <img src="https://placehold.co/80" alt="Клиент" class="feedback-img">
+                <div>
+                    <h4>Мария Иванова</h4>
+                    <small>г. Казань</small>
+                    <p>«Приятные мастера, все объяснили и показали. Цены адекватные.»</p>
+                </div>
+            </div>
+            <!-- Отзыв 3 -->
+            <div class="feedback-item">
+                <img src="https://placehold.co/80" alt="Клиент" class="feedback-img">
+                <div>
+                    <h4>Дмитрий Петров</h4>
+                    <small>г. Самара</small>
+                    <p>«Заезжал на диагностику. Нашли проблему, которую другие не видели.»</p>
+                </div>
+            </div>
+            <!-- Отзыв 4 -->
+            <div class="feedback-item">
+                <img src="https://placehold.co/80" alt="Клиент" class="feedback-img">
+                <div>
+                    <h4>Елена Кузнецова</h4>
+                    <small>г. Омск</small>
+                    <p>«Очень удобно, что есть зона ожидания и кофе. Спасибо!»</p>
+                </div>
+            </div>
+            <!-- Отзыв 5 -->
+            <div class="feedback-item">
+                <img src="https://placehold.co/80" alt="Клиент" class="feedback-img">
+                <div>
+                    <h4>Сергей Волков</h4>
+                    <small>г. Новосибирск</small>
+                    <p>«Ремонтировал двигатель. Сделали скидку как новому клиенту.»</p>
+                </div>
+            </div>
+            <!-- Отзыв 6 -->
+            <div class="feedback-item">
+                <img src="https://placehold.co/80" alt="Клиент" class="feedback-img">
+                <div>
+                    <h4>Ольга Морозова</h4>
+                    <small>г. Краснодар</small>
+                    <p>«Все супер! Машина как новая. Буду обращаться еще.»</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<footer>
+    <div class="container footer-inner">
+        <div>
+            <h4>О нас</h4>
+            <p>Надежные услуги с 2002 года.</p>
+        </div>
+        <div>
+            <h4>Навигация</h4>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Контакты</h4>
+            <p>info@doc-auto.ru</p>
+            <p>(415) 347-3160</p>
+        </div>
+        <div>
+            <h4>Рассылка</h4>
+            <input type="email" placeholder="Email">
+            <button class="btn">Подписаться</button>
+        </div>
+    </div>
+    <div class="container" style="text-align: center; border-top: 1px solid #333; padding-top: 10px;">
+        &copy; 2025 АвтоДоктор
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

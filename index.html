@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АвтоДоктор - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <!-- 1.1 Логотип -->
+        <div class="logo">
+            <img src="https://placehold.co/150x50/e74c3c/fff?text=AUTO+DOC" alt="Логотип">
+        </div>
+
+        <!-- 1.2 Навигация -->
+        <nav>
+            <ul>
+                <li class="dropdown">Сервис &#9662;
+                    <ul class="dropdown-content">
+                        <li><a href="#">Двигатель</a></li>
+                        <li><a href="#">Подвеска</a></li>
+                        <li><a href="#">Диагностика</a></li>
+                    </ul>
+                </li>
+                <li><a href="feedback.html">Отзывы</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="#">Магазин</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="lk.html">ЛК</a></li>
+                <!-- 1.2.7 Переключатель темы -->
+                <li><button id="theme-toggle" class="btn">Тема</button></li>
+            </ul>
+        </nav>
+
+        <!-- 1.3 Быстрый вход -->
+        <div class="login-mini">
+            <form action="lk.html">
+                <input type="tel" placeholder="Телефон">
+                <input type="password" placeholder="Пароль">
+                <button type="submit" class="btn">→</button>
+            </form>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- 2. Баннер -->
+    <section class="hero-banner">
+        <h1>Ваш автомобиль — наша забота</h1>
+        <p>Акция: Бесплатная замена масла с 15 марта (если есть цифра "5" в номере)</p>
+        <br>
+        <a href="#booking" class="btn">Записаться</a>
+    </section>
+
+    <div class="container">
+        <!-- 3. Инфо секция -->
+        <section class="info-section">
+            <div class="info-block">
+                <h3>Преимущества</h3>
+                <ul>
+                    <li>- Бесплатная диагностика</li>
+                    <li>- Сертифицированные услуги</li>
+                    <li>- Справедливая цена</li>
+                </ul>
+            </div>
+            <div class="info-block">
+                <h3>Часы работы</h3>
+                <p>Будни: 05:00 – 22:00</p>
+                <p>Суббота: 10:00 – 20:00</p>
+            </div>
+            <div class="info-block">
+                <h3>Связь</h3>
+                <p>Тел: (415) 347-3160</p>
+                <p>Моб: 02 562-958</p>
+            </div>
+        </section>
+
+        <!-- 4. Запись на сервис -->
+        <section id="booking" class="booking-form">
+            <h2>Запись на сервис</h2>
+            <form action="#" class="form-grid">
+                <input type="text" placeholder="Марка">
+                <input type="text" placeholder="Модель">
+                <input type="text" placeholder="Город">
+                <input type="text" placeholder="Имя">
+                <input type="tel" placeholder="Телефон">
+                <input type="date">
+                <textarea class="full-width" placeholder="Описание неисправности"></textarea>
+                <div class="full-width" style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+                    <input type="checkbox" id="agree" style="width: auto; margin: 0;">
+					<label for="agree">Согласие на обработку персональных данных</label>
+                </div>
+                <button type="submit" class="btn full-width" onclick="alert('Менеджер свяжется с вами! Пароль отправлен по СМС.')">Записаться</button>
+            </form>
+        </section>
+
+        <!-- 5. Услуги -->
+        <section>
+            <h2>Услуги ремонта</h2>
+            <p>Мы являемся ведущей мастерской...</p>
+            <div class="cards-grid">
+                <!-- Карточки (пример) -->
+                <div class="card">
+                    <img src="https://placehold.co/100" alt="Icon">
+                    <h4>Двигатель</h4>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/100" alt="Icon">
+                    <h4>Кузов</h4>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/100" alt="Icon">
+                    <h4>Электрика</h4>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/100" alt="Icon">
+                    <h4>Шиномонтаж</h4>
+                </div>
+            </div>
+            <br>
+            <a href="repair.html" class="btn">Все услуги</a>
+        </section>
+
+        <!-- 6. О нас + Слайдер -->
+        <section style="margin-top: 40px;">
+            <h2>Мы работаем с 2002 года</h2>
+            <p>Наши механики позаботятся о том, чтобы Ваш автомобиль работал наилучшим образом.</p>
+            
+            <h3>Отзывы клиентов</h3>
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <img src="https://placehold.co/50" alt="Client" style="border-radius:50%">
+                    <h4>Иван Иванов</h4>
+                    <p>Москва</p>
+                    <p>"Отличный сервис, быстро и качественно!"</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://placehold.co/50" alt="Client" style="border-radius:50%">
+                    <h4>Петр Петров</h4>
+                    <p>Казань</p>
+                    <p>"Цены приятные, мастера опытные."</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://placehold.co/50" alt="Client" style="border-radius:50%">
+                    <h4>Анна Сидорова</h4>
+                    <p>Омск</p>
+                    <p>"Помогли с двигателем, спасибо!"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Популярные товары -->
+        <section>
+            <h2>Популярные товары</h2>
+            <div class="cards-grid">
+                <!-- Нужно 6 карточек -->
+                <div class="card"><img src="https://placehold.co/150" alt="Товар"><h4>Масло</h4><p>500р</p><button class="btn">В корзину</button></div>
+                <div class="card"><img src="https://placehold.co/150" alt="Товар"><h4>Фильтр</h4><p>200р</p><button class="btn">В корзину</button></div>
+                <div class="card"><img src="https://placehold.co/150" alt="Товар"><h4>Свечи</h4><p>800р</p><button class="btn">В корзину</button></div>
+                <div class="card"><img src="https://placehold.co/150" alt="Товар"><h4>Коврики</h4><p>1500р</p><button class="btn">В корзину</button></div>
+                <div class="card"><img src="https://placehold.co/150" alt="Товар"><h4>Дворники</h4><p>600р</p><button class="btn">В корзину</button></div>
+                <div class="card"><img src="https://placehold.co/150" alt="Товар"><h4>Лампы</h4><p>300р</p><button class="btn">В корзину</button></div>
+            </div>
+        </section>
+        
+        <!-- 8. Карта -->
+        <section style="margin-top: 40px;">
+            <img src="https://placehold.co/1200x400/222/fff?text=MAP+PLACEHOLDER" alt="Карта" style="width:100%">
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <div>
+            <h4>О нас</h4>
+            <p>Надежные услуги с 2002 года.</p>
+        </div>
+        <div>
+            <h4>Навигация</h4>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Контакты</h4>
+            <p>info@doc-auto.ru</p>
+            <p>(415) 347-3160</p>
+        </div>
+        <div>
+            <h4>Рассылка</h4>
+            <input type="email" placeholder="Email">
+            <button class="btn">Подписаться</button>
+        </div>
+    </div>
+    <div class="container" style="text-align: center; border-top: 1px solid #333; padding-top: 10px;">
+        &copy; 2025 АвтоДоктор
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
